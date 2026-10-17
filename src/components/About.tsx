@@ -40,7 +40,7 @@ export const About: React.FC = () => {
       >
         {/* Section Header */}
         <div className="max-w-3xl space-y-4">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full glass-panel border-[#18648a]/30 text-xs font-semibold text-[#0c4a6e] dark:text-cyan-300">
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full glass-panel border-[#18648a]/30 text-xs font-semibold text-[#18648a] dark:text-cyan-300">
             <span>{t.about.badge}</span>
           </div>
           <h2 className="text-3xl sm:text-5xl font-extrabold tracking-tight text-foreground">
@@ -64,7 +64,7 @@ export const About: React.FC = () => {
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-2">
               {t.about.highlights.map((h, i) => (
                 <div key={i} className="flex items-center gap-2.5 p-3 rounded-xl glass-panel border border-[#18648a]/20">
-                  <CheckCircle2 className="w-4 h-4 text-[#0c4a6e] dark:text-cyan-300 shrink-0" />
+                  <CheckCircle2 className="w-4 h-4 text-[#18648a] dark:text-cyan-300 shrink-0" />
                   <span className="text-xs font-semibold text-foreground/90">{h}</span>
                 </div>
               ))}
@@ -76,7 +76,7 @@ export const About: React.FC = () => {
               <p className="text-sm sm:text-base font-medium text-foreground/90 italic leading-relaxed">
                 "{t.about.quote}"
               </p>
-              <p className="text-xs font-bold text-[#0c4a6e] dark:text-cyan-300 mt-3 uppercase tracking-wider">
+              <p className="text-xs font-bold text-[#18648a] dark:text-cyan-300 mt-3 uppercase tracking-wider">
                 — Lorenzo Toccaceli
               </p>
             </div>

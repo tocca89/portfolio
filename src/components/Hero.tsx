@@ -90,11 +90,11 @@ export const Hero: React.FC = () => {
           {/* Quick Info Badges */}
           <div className="flex flex-wrap items-center justify-center lg:justify-start gap-4 text-xs text-muted-foreground pt-1">
             <span className="flex items-center gap-1.5 px-3 py-1 rounded-full glass-panel border-[#18648a]/30">
-              <MapPin className="w-3.5 h-3.5 text-[#0c4a6e] dark:text-cyan-400" />
+              <MapPin className="w-3.5 h-3.5 text-[#18648a] dark:text-cyan-400" />
               <span>{t.contact.info.location}</span>
             </span>
             <span className="flex items-center gap-1.5 px-3 py-1 rounded-full glass-panel border-[#18648a]/30">
-              <Sparkles className="w-3.5 h-3.5 text-[#0c4a6e] dark:text-cyan-400" />
+              <Sparkles className="w-3.5 h-3.5 text-[#18648a] dark:text-cyan-400" />
               <span>B2B SaaS • Onboarding • MRR Growth</span>
             </span>
           </div>

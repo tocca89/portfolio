@@ -18,7 +18,7 @@ export const Skills: React.FC = () => {
           transition={{ duration: 0.8 }}
           className="text-center max-w-2xl mx-auto space-y-4"
         >
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full glass-panel border-[#18648a]/30 text-xs font-semibold text-[#0c4a6e] dark:text-cyan-300">
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full glass-panel border-[#18648a]/30 text-xs font-semibold text-[#18648a] dark:text-cyan-300">
             <span>{t.skills.badge}</span>
           </div>
           <h2 className="text-3xl sm:text-5xl font-extrabold tracking-tight text-foreground">
@@ -82,7 +82,13 @@ export const Skills: React.FC = () => {
             </div>
             <div>
               <h3 className="text-xl font-bold text-foreground">{t.skills.languagesTitle}</h3>
-              <p className="text-xs text-muted-foreground">Competenze linguistiche operative sui mercati europei</p>
+              <p className="text-xs text-muted-foreground">
+                {t.nav.home === 'Home' && t.nav.services === 'Servizi'
+                  ? 'Competenze linguistiche operative sui mercati europei'
+                  : t.nav.home === 'Inicio'
+                  ? 'Competencias lingüísticas operativas en mercados europeos'
+                  : 'Operational language proficiencies across European markets'}
+              </p>
             </div>
           </div>
 
@@ -91,7 +97,7 @@ export const Skills: React.FC = () => {
               <div key={idx} className="p-5 rounded-2xl bg-white/5 dark:bg-white/5 border border-white/5 space-y-2">
                 <div className="flex items-center justify-between">
                   <span className="font-bold text-base text-foreground">{l.lang}</span>
-                  <span className="px-3 py-1 rounded-full text-xs font-bold bg-[#18648a]/15 dark:bg-[#18648a]/35 text-[#0c4a6e] dark:text-cyan-200 border border-[#18648a]/30 dark:border-[#18648a]/50 shadow-sm">
+                  <span className="px-3 py-1 rounded-full text-xs font-bold bg-[#18648a]/15 dark:bg-[#18648a]/35 text-[#18648a] dark:text-cyan-200 border border-[#18648a]/30 dark:border-[#389bc7]/40 shadow-sm">
                     {l.level}
                   </span>
                 </div>

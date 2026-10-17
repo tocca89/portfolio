@@ -17,7 +17,6 @@ import { Education } from './components/Education';
 import { Contact } from './components/Contact';
 import { Footer } from './components/Footer';
 import { Dock } from './components/Dock';
-import { CustomCursor } from './components/CustomCursor';
 import { MobilePager } from './components/MobilePager';
 import { MobileNextSectionCTA } from './components/MobileNextSectionCTA';
 
@@ -75,7 +74,6 @@ const AppContent: React.FC = () => {
 
   return (
     <div className="min-h-screen bg-background text-foreground relative selection:bg-[#18648a]/30 selection:text-cyan-200">
-      <CustomCursor />
       <Navbar />
 
       {/* Mobile Paginated Layout (Mobile Screen & Paginated Mode) */}

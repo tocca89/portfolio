@@ -20,7 +20,7 @@ export const Projects: React.FC = () => {
           transition={{ duration: 0.8 }}
           className="text-center max-w-2xl mx-auto space-y-4"
         >
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full glass-panel border-[#18648a]/30 text-xs font-semibold text-[#0c4a6e] dark:text-cyan-300">
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full glass-panel border-[#18648a]/30 text-xs font-semibold text-[#18648a] dark:text-cyan-300">
             <span>{t.projects.badge}</span>
           </div>
           <h2 className="text-3xl sm:text-5xl font-extrabold tracking-tight text-foreground">
@@ -145,13 +145,13 @@ export const Projects: React.FC = () => {
                 </div>
               )}
 
-              <span className="text-xs font-mono font-bold text-[#0c4a6e] dark:text-cyan-300 tracking-wider uppercase mb-2 block">
+              <span className="text-xs font-mono font-bold text-[#18648a] dark:text-cyan-300 tracking-wider uppercase mb-2 block">
                 {activeProject.category}
               </span>
               <h3 className="text-2xl sm:text-3xl font-extrabold text-foreground mb-2">
                 {activeProject.title}
               </h3>
-              <p className="text-sm font-semibold text-[#0c4a6e] dark:text-cyan-300 mb-6">
+              <p className="text-sm font-semibold text-[#18648a] dark:text-cyan-300 mb-6">
                 {activeProject.subtitle}
               </p>
 

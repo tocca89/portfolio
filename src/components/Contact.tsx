@@ -81,7 +81,7 @@ export const Contact: React.FC = () => {
         <div className="relative z-10 flex flex-col gap-12">
           {/* Section Header */}
           <div className="text-center max-w-3xl mx-auto space-y-4">
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full glass-panel border-[#18648a]/30 text-xs font-semibold text-[#0c4a6e] dark:text-cyan-300">
+            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full glass-panel border-[#18648a]/30 text-xs font-semibold text-[#18648a] dark:text-cyan-300">
               <span>{t.contact.badge}</span>
             </div>
             <h2 className="text-3xl sm:text-5xl font-extrabold tracking-tight text-foreground">
@@ -91,12 +91,6 @@ export const Contact: React.FC = () => {
             <p className="text-base text-muted-foreground leading-relaxed max-w-2xl mx-auto">
               {t.contact.description}
             </p>
-
-            {/* Availability Status Pill */}
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-emerald-500/10 border border-emerald-500/30 text-xs font-bold text-emerald-400 shadow-sm mt-2">
-              <span className="w-2 h-2 rounded-full bg-emerald-400 animate-ping" />
-              <span>{t.contact.availableStatus}</span>
-            </div>
           </div>
 
           {/* Clean Prominent Contact Cards Grid */}
@@ -138,7 +132,7 @@ export const Contact: React.FC = () => {
                           </button>
                           <a
                             href={card.action.href}
-                            className="inline-flex items-center gap-1.5 px-4 py-2 rounded-xl text-xs font-bold bg-[#18648a]/15 dark:bg-[#18648a]/35 text-[#0c4a6e] dark:text-cyan-200 border border-[#18648a]/30 dark:border-[#18648a]/50 hover:bg-[#18648a]/25 dark:hover:bg-[#18648a]/45 transition-all shadow-sm"
+                            className="inline-flex items-center gap-1.5 px-4 py-2 rounded-xl text-xs font-bold bg-[#18648a]/15 dark:bg-[#18648a]/35 text-[#18648a] dark:text-cyan-200 border border-[#18648a]/30 dark:border-[#389bc7]/40 hover:bg-[#18648a]/25 dark:hover:bg-[#18648a]/45 transition-all shadow-sm"
                           >
                             <span>{t.contact.openEmail}</span>
                             <ArrowUpRight className="w-3.5 h-3.5" />

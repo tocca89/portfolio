@@ -101,6 +101,8 @@ export interface TranslationContent {
     badge: string;
     title: string;
     subtitle: string;
+    academicTitle: string;
+    certificationsTitle: string;
     items: {
       period: string;
       title: string;
@@ -443,9 +445,11 @@ export const translations: Record<Language, TranslationContent> = {
       ],
     },
     education: {
-      badge: "Formazione & Competenze",
-      title: "Percorso Accademico &",
+      badge: "Formazione & Percorso",
+      title: "Titoli Accademici &",
       subtitle: "Certificazioni Continue",
+      academicTitle: "Percorso Accademico & Titoli di Studio",
+      certificationsTitle: "Corsi di Specializzazione & Formazione AI",
       items: [
         {
           period: "2008 – 2013",
@@ -822,9 +826,11 @@ export const translations: Record<Language, TranslationContent> = {
       ],
     },
     education: {
-      badge: "Formación & Aprendizaje",
-      title: "Estudios Académicos &",
+      badge: "Formación & Trayectoria",
+      title: "Titulaciones Académicas &",
       subtitle: "Especializaciones Continuas",
+      academicTitle: "Formación Académica y Titulaciones",
+      certificationsTitle: "Cursos de Especialización y Formación en IA",
       items: [
         {
           period: "2008 – 2013",
@@ -1202,8 +1208,10 @@ export const translations: Record<Language, TranslationContent> = {
     },
     education: {
       badge: "Education & Growth",
-      title: "Academic Background &",
-      subtitle: "Continuous Learning",
+      title: "Academic Degrees &",
+      subtitle: "Continuous Certifications",
+      academicTitle: "Academic Background & Formal Education",
+      certificationsTitle: "Specialized Courses & AI Certifications",
       items: [
         {
           period: "2008 – 2013",
