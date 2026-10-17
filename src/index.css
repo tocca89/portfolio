@@ -1,0 +1,164 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --background: #080d12;
+    --foreground: #f1f5f9;
+    --card: rgba(14, 25, 36, 0.72);
+    --card-foreground: #f8fafc;
+    --primary: #18648a;
+    --primary-light: #389bc7;
+    --primary-glow: #56b5df;
+    --primary-foreground: #ffffff;
+    --primary-rgb: 24, 100, 138;
+    --secondary: #0e2534;
+    --secondary-foreground: #e0f2fe;
+    --muted: #132230;
+    --muted-foreground: #94a3b8;
+    --accent: #2082b0;
+    --accent-foreground: #ffffff;
+    --border: rgba(56, 181, 223, 0.12);
+    --ring: #18648a;
+    --radius: 1rem;
+  }
+
+  .light {
+    --background: #f4f8fb;
+    --foreground: #0c1a24;
+    --card: rgba(255, 255, 255, 0.88);
+    --card-foreground: #0c1a24;
+    --primary: #18648a;
+    --primary-light: #2082b0;
+    --primary-glow: #389bc7;
+    --primary-foreground: #ffffff;
+    --primary-rgb: 24, 100, 138;
+    --secondary: #e2eff6;
+    --secondary-foreground: #0c1a24;
+    --muted: #e1ebf2;
+    --muted-foreground: #5a7385;
+    --accent: #134e6c;
+    --accent-foreground: #ffffff;
+    --border: rgba(24, 100, 138, 0.14);
+    --ring: #18648a;
+  }
+}
+
+body {
+  font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  background-color: var(--background);
+  color: var(--foreground);
+  overflow-x: hidden;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Glassmorphism */
+.glass-panel {
+  background: var(--card);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid var(--border);
+}
+
+.glass-pill {
+  background: rgba(255, 255, 255, 0.04);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid var(--border);
+}
+
+.light .glass-pill {
+  background: rgba(24, 100, 138, 0.05);
+}
+
+/* Text Gradients for #18648a */
+.text-gradient-primary {
+  background: linear-gradient(135deg, #7ecef0 0%, #389bc7 40%, #18648a 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.light .text-gradient-primary {
+  background: linear-gradient(135deg, #0e3a51 0%, #18648a 50%, #2082b0 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.text-gradient-subtle {
+  background: linear-gradient(180deg, #ffffff 0%, #94a3b8 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.light .text-gradient-subtle {
+  background: linear-gradient(180deg, #0c1a24 0%, #5a7385 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Marquee Animation */
+@keyframes marquee {
+  0% { transform: translateX(0%); }
+  100% { transform: translateX(-50%); }
+}
+
+.animate-marquee {
+  display: flex;
+  width: max-content;
+  animation: marquee 35s linear infinite;
+}
+
+.animate-marquee:hover {
+  animation-play-state: paused;
+}
+
+/* Template Aurora Animations */
+@keyframes aurora-1 {
+  0% { top: 0; right: 0; }
+  50% { top: 100%; right: 75%; }
+  75% { top: 100%; right: 25%; }
+  100% { top: 0; right: 0; }
+}
+
+@keyframes aurora-2 {
+  0% { top: -50%; left: 0%; }
+  60% { top: 100%; left: 75%; }
+  85% { top: 100%; left: 25%; }
+  100% { top: -50%; left: 0%; }
+}
+
+@keyframes aurora-3 {
+  0% { bottom: 0; left: 0; }
+  40% { bottom: 100%; left: 75%; }
+  65% { bottom: 40%; left: 50%; }
+  100% { bottom: 0; left: 0; }
+}
+
+@keyframes aurora-4 {
+  0% { bottom: -50%; right: 0; }
+  50% { bottom: 0%; right: 40%; }
+  90% { bottom: 50%; right: 25%; }
+  100% { bottom: -50%; right: 0; }
+}
+
+@keyframes aurora-border {
+  0% { border-radius: 37% 29% 27% 27% / 28% 25% 41% 37%; }
+  25% { border-radius: 47% 29% 39% 49% / 61% 19% 66% 26%; }
+  50% { border-radius: 57% 23% 47% 72% / 63% 17% 66% 33%; }
+  75% { border-radius: 28% 49% 29% 100% / 93% 20% 64% 25%; }
+  100% { border-radius: 37% 29% 27% 27% / 28% 25% 41% 37%; }
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: var(--background);
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(24, 100, 138, 0.35);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(56, 181, 223, 0.6);
+}
