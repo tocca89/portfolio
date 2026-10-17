@@ -104,23 +104,6 @@ export const CareerTimeline: React.FC = () => {
                         {item.description}
                       </p>
 
-                      {/* Milestone Launch Visual */}
-                      {item.image && (
-                        <div className="w-full h-48 sm:h-60 rounded-2xl overflow-hidden mb-5 border border-[#18648a]/30 relative group/img shadow-md">
-                          <img
-                            src={item.image}
-                            alt={item.company}
-                            style={{ objectPosition: 'center 66%' }}
-                            className="w-full h-full object-cover group-hover/img:scale-105 transition-transform duration-500"
-                            loading="lazy"
-                            onError={(e) => {
-                              (e.target as HTMLImageElement).src = '/takeoff-espana.jpg';
-                            }}
-                          />
-                          <div className="absolute inset-0 bg-gradient-to-t from-background/85 via-background/20 to-transparent pointer-events-none" />
-                        </div>
-                      )}
-
                       {/* Key Achievements */}
                       <div className="space-y-2.5 pt-3 border-t border-white/5">
                         {item.achievements.map((ach, aIdx) => (

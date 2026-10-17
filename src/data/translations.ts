@@ -384,7 +384,6 @@ export const translations: Record<Language, TranslationContent> = {
           role: "Cofondatore & Customer Success Manager",
           company: "TakeOff España",
           location: "Valladolid, Spagna",
-          image: takeoffEspanaImg,
           description:
             "Avvio e sviluppo delle operazioni sul mercato spagnolo di TakeOff CRM. Gestione completa dell'onboarding dei clienti iberici, formazione operativa e coordinamento delle attività di marketing locale.",
           achievements: [
@@ -765,7 +764,6 @@ export const translations: Record<Language, TranslationContent> = {
           role: "Cofundador y Customer Success Manager",
           company: "TakeOff España",
           location: "Valladolid, España",
-          image: takeoffEspanaImg,
           description:
             "Lanzamiento y consolidación de las operaciones en España de TakeOff CRM. Gestión integral del onboarding de clientes españoles, formación operativa y coordinación de iniciativas comerciales locales.",
           achievements: [
@@ -1146,7 +1144,6 @@ export const translations: Record<Language, TranslationContent> = {
           role: "Co-founder & Customer Success Manager",
           company: "TakeOff España",
           location: "Valladolid, Spain",
-          image: takeoffEspanaImg,
           description:
             "Spearheaded TakeOff CRM operations in Spain. Managing end-to-end client onboarding, user training, local operational workflows, and Spanish market development.",
           achievements: [
