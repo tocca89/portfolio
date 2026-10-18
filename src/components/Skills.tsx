@@ -2,6 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { useLanguage } from '../context/LanguageContext';
 import { Users2, Layers, Sparkles, Building2, Globe2 } from 'lucide-react';
+import { MagicCard } from './MagicCard';
 
 export const Skills: React.FC = () => {
   const { t } = useLanguage();
@@ -38,34 +39,33 @@ export const Skills: React.FC = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, amount: 0.15 }}
                 transition={{ duration: 0.6, delay: idx * 0.1 }}
-                className="glass-panel p-8 rounded-3xl relative overflow-hidden group border border-cyan-500/15 dark:border-cyan-500/20 hover:border-cyan-400/50 transition-all duration-300 shadow-xl"
+                className="h-full"
               >
-                {/* Background ambient glow */}
-                <div className="absolute top-0 right-0 w-40 h-40 bg-cyan-500/10 dark:bg-cyan-500/15 blur-3xl rounded-full group-hover:bg-cyan-400/25 transition-all pointer-events-none" />
-
-                <div className="flex items-center gap-4 mb-4">
-                  <div className="w-12 h-12 rounded-2xl border-2 border-cyan-400/80 bg-cyan-950/40 backdrop-blur-md flex items-center justify-center text-cyan-400 dark:text-cyan-300 shadow-[0_0_15px_rgba(34,211,238,0.2)] group-hover:scale-105 group-hover:border-cyan-300 transition-all">
-                    <Icon className="w-6 h-6" />
+                <MagicCard className="h-full" gradientSize={280}>
+                  <div className="flex items-center gap-4 mb-4">
+                    <div className="w-12 h-12 rounded-2xl border-2 border-cyan-400/80 bg-cyan-950/40 backdrop-blur-md flex items-center justify-center text-cyan-400 dark:text-cyan-300 shadow-[0_0_15px_rgba(34,211,238,0.2)] group-hover:scale-105 group-hover:border-cyan-300 transition-all">
+                      <Icon className="w-6 h-6" />
+                    </div>
+                    <div>
+                      <h3 className="text-lg sm:text-xl font-bold tracking-tight text-cyan-600 dark:text-cyan-400 group-hover:text-cyan-500 dark:group-hover:text-cyan-300 transition-colors">
+                        {cat.name}
+                      </h3>
+                      <p className="text-xs text-muted-foreground">{cat.description}</p>
+                    </div>
                   </div>
-                  <div>
-                    <h3 className="text-lg sm:text-xl font-bold tracking-tight text-cyan-600 dark:text-cyan-400 group-hover:text-cyan-500 dark:group-hover:text-cyan-300 transition-colors">
-                      {cat.name}
-                    </h3>
-                    <p className="text-xs text-muted-foreground">{cat.description}</p>
-                  </div>
-                </div>
 
-                {/* Skill Pills */}
-                <div className="flex flex-wrap gap-2 pt-3">
-                  {cat.skills.map((skill, sIdx) => (
-                    <span
-                      key={sIdx}
-                      className="px-3 py-1.5 rounded-xl text-xs font-semibold bg-white/5 dark:bg-white/5 border border-white/10 text-foreground/90 hover:border-[#389bc7]/50 hover:bg-[#18648a]/15 transition-colors"
-                    >
-                      {skill}
-                    </span>
-                  ))}
-                </div>
+                  {/* Skill Pills */}
+                  <div className="flex flex-wrap gap-2 pt-3">
+                    {cat.skills.map((skill, sIdx) => (
+                      <span
+                        key={sIdx}
+                        className="px-3 py-1.5 rounded-xl text-xs font-semibold bg-white/5 dark:bg-white/5 border border-white/10 text-foreground/90 hover:border-[#389bc7]/50 hover:bg-[#18648a]/15 transition-colors"
+                      >
+                        {skill}
+                      </span>
+                    ))}
+                  </div>
+                </MagicCard>
               </motion.div>
             );
           })}
