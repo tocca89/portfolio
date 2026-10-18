@@ -44,30 +44,30 @@ export const Services: React.FC = () => {
                 <MagicCard className="h-full" gradientSize={300}>
                   <div>
                     <div className="flex items-center justify-between mb-6">
-                      {/* Luminous cyan icon box from screenshot */}
-                      <div className="w-14 h-14 rounded-2xl border-2 border-cyan-400/90 bg-cyan-950/50 backdrop-blur-md flex items-center justify-center shadow-[0_0_20px_rgba(34,211,238,0.3)] group-hover:scale-105 group-hover:border-cyan-300 group-hover:shadow-[0_0_28px_rgba(34,211,238,0.5)] transition-all">
-                        <Icon className="w-6 h-6 text-cyan-400 dark:text-cyan-300 drop-shadow-[0_0_8px_rgba(34,211,238,0.6)]" />
+                      {/* Icon box: sky-blue white in day mode, luminous cyan in night mode */}
+                      <div className="w-14 h-14 rounded-2xl border-2 border-[#18648a]/35 dark:border-cyan-400/90 bg-white/90 dark:bg-cyan-950/50 backdrop-blur-md flex items-center justify-center shadow-sm dark:shadow-[0_0_20px_rgba(34,211,238,0.3)] group-hover:scale-105 group-hover:border-[#18648a] dark:group-hover:border-cyan-300 transition-all">
+                        <Icon className="w-6 h-6 text-[#18648a] dark:text-cyan-300 dark:drop-shadow-[0_0_8px_rgba(34,211,238,0.6)]" />
                       </div>
-                      <span className="text-xs font-mono font-bold text-zinc-500 dark:text-cyan-200/80">
+                      <span className="text-xs font-mono font-bold text-[#18648a]/70 dark:text-cyan-200/80">
                         0{idx + 1}
                       </span>
                     </div>
 
-                    <h3 className="text-xl sm:text-2xl font-bold tracking-tight text-cyan-600 dark:text-cyan-300 group-hover:text-cyan-500 dark:group-hover:text-cyan-200 mb-3 transition-colors">
+                    <h3 className="text-xl sm:text-2xl font-bold tracking-tight text-[#0f344a] dark:text-cyan-300 group-hover:text-[#18648a] dark:group-hover:text-cyan-200 mb-3 transition-colors">
                       {item.title}
                     </h3>
 
-                    <p className="text-sm sm:text-base text-zinc-700 dark:text-slate-100 leading-relaxed mb-6 font-normal">
+                    <p className="text-sm sm:text-base text-[#1b3648] dark:text-slate-100 leading-relaxed mb-6 font-normal">
                       {item.description}
                     </p>
                   </div>
 
                   {/* Tags */}
-                  <div className="flex flex-wrap gap-2 pt-4 border-t border-cyan-500/15 dark:border-white/15">
+                  <div className="flex flex-wrap gap-2 pt-4 border-t border-[#18648a]/15 dark:border-white/15">
                     {item.tags.map((tag, tIdx) => (
                       <span
                         key={tIdx}
-                        className="px-3 py-1.5 rounded-xl text-xs font-semibold bg-cyan-950/20 dark:bg-white/10 text-zinc-800 dark:text-slate-100 border border-cyan-900/25 dark:border-white/20 group-hover:border-cyan-400/40 transition-colors"
+                        className="px-3 py-1.5 rounded-xl text-xs font-semibold bg-white/90 dark:bg-white/10 text-[#0f344a] dark:text-slate-100 border border-[#18648a]/20 dark:border-white/20 group-hover:border-[#18648a]/40 dark:group-hover:border-cyan-400/40 shadow-xs transition-colors"
                       >
                         {tag}
                       </span>

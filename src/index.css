@@ -27,20 +27,20 @@
   .light {
     --background: #f4f8fb;
     --foreground: #0c1a24;
-    --card: rgba(255, 255, 255, 0.88);
+    --card: #eaf4fb;
     --card-foreground: #0c1a24;
     --primary: #18648a;
     --primary-light: #2082b0;
     --primary-glow: #389bc7;
     --primary-foreground: #ffffff;
     --primary-rgb: 24, 100, 138;
-    --secondary: #e2eff6;
+    --secondary: #d9ecf6;
     --secondary-foreground: #0c1a24;
-    --muted: #e1ebf2;
-    --muted-foreground: #5a7385;
+    --muted: #d5e7f2;
+    --muted-foreground: #254457;
     --accent: #134e6c;
     --accent-foreground: #ffffff;
-    --border: rgba(24, 100, 138, 0.14);
+    --border: rgba(24, 100, 138, 0.20);
     --ring: #18648a;
   }
 }
