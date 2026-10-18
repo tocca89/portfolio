@@ -19,6 +19,7 @@ import { Footer } from './components/Footer';
 import { Dock } from './components/Dock';
 import { MobilePager } from './components/MobilePager';
 import { MobileNextSectionCTA } from './components/MobileNextSectionCTA';
+import { SmoothCursor } from './components/SmoothCursor';
 
 const AppContent: React.FC = () => {
   const { isMobile, isPaginated, currentPage, direction, nextPage, prevPage } = useMobilePagination();
@@ -74,6 +75,7 @@ const AppContent: React.FC = () => {
 
   return (
     <div className="min-h-screen bg-background text-foreground relative selection:bg-[#18648a]/30 selection:text-cyan-200">
+      <SmoothCursor />
       <Navbar />
 
       {/* Mobile Paginated Layout (Mobile Screen & Paginated Mode) */}

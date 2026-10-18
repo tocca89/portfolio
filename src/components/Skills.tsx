@@ -38,14 +38,17 @@ export const Skills: React.FC = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, amount: 0.15 }}
                 transition={{ duration: 0.6, delay: idx * 0.1 }}
-                className="glass-panel p-8 rounded-3xl relative overflow-hidden group hover:border-[#18648a]/50 transition-all duration-300 shadow-xl"
+                className="glass-panel p-8 rounded-3xl relative overflow-hidden group border border-cyan-500/15 dark:border-cyan-500/20 hover:border-cyan-400/50 transition-all duration-300 shadow-xl"
               >
+                {/* Background ambient glow */}
+                <div className="absolute top-0 right-0 w-40 h-40 bg-cyan-500/10 dark:bg-cyan-500/15 blur-3xl rounded-full group-hover:bg-cyan-400/25 transition-all pointer-events-none" />
+
                 <div className="flex items-center gap-4 mb-4">
-                  <div className="w-12 h-12 rounded-2xl bg-gradient-to-tr from-[#18648a]/40 to-cyan-500/20 border border-[#18648a]/30 flex items-center justify-center text-cyan-400 group-hover:scale-110 transition-transform">
+                  <div className="w-12 h-12 rounded-2xl border-2 border-cyan-400/80 bg-cyan-950/40 backdrop-blur-md flex items-center justify-center text-cyan-400 dark:text-cyan-300 shadow-[0_0_15px_rgba(34,211,238,0.2)] group-hover:scale-105 group-hover:border-cyan-300 transition-all">
                     <Icon className="w-6 h-6" />
                   </div>
                   <div>
-                    <h3 className="text-lg sm:text-xl font-bold tracking-tight text-foreground">
+                    <h3 className="text-lg sm:text-xl font-bold tracking-tight text-cyan-600 dark:text-cyan-400 group-hover:text-cyan-500 dark:group-hover:text-cyan-300 transition-colors">
                       {cat.name}
                     </h3>
                     <p className="text-xs text-muted-foreground">{cat.description}</p>
