@@ -5,21 +5,21 @@
 @layer base {
   :root {
     --background: #080d12;
-    --foreground: #f1f5f9;
-    --card: rgba(14, 25, 36, 0.72);
-    --card-foreground: #f8fafc;
+    --foreground: #f8fafc;
+    --card: rgba(22, 38, 54, 0.92);
+    --card-foreground: #ffffff;
     --primary: #18648a;
     --primary-light: #389bc7;
     --primary-glow: #56b5df;
     --primary-foreground: #ffffff;
     --primary-rgb: 24, 100, 138;
-    --secondary: #0e2534;
+    --secondary: #132e42;
     --secondary-foreground: #e0f2fe;
-    --muted: #132230;
-    --muted-foreground: #94a3b8;
+    --muted: #162b3c;
+    --muted-foreground: #cbd5e1;
     --accent: #2082b0;
     --accent-foreground: #ffffff;
-    --border: rgba(56, 181, 223, 0.12);
+    --border: rgba(56, 181, 223, 0.22);
     --ring: #18648a;
     --radius: 1rem;
   }

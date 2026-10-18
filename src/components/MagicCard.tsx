@@ -23,8 +23,8 @@ export const MagicCard: React.FC<MagicCardProps> = ({
   const { theme } = useTheme();
   const isDark = theme === 'dark';
 
-  const defaultGlow = isDark ? 'rgba(34, 211, 238, 0.16)' : 'rgba(24, 100, 138, 0.12)';
-  const defaultFrom = isDark ? '#22d3ee' : '#389bc7';
+  const defaultGlow = isDark ? 'rgba(56, 181, 223, 0.22)' : 'rgba(24, 100, 138, 0.15)';
+  const defaultFrom = isDark ? '#38bdf8' : '#2082b0';
   const defaultTo = isDark ? '#18648a' : '#18648a';
 
   const activeGlow = gradientColor ?? defaultGlow;
@@ -52,7 +52,7 @@ export const MagicCard: React.FC<MagicCardProps> = ({
     <div
       onMouseMove={handleMouseMove}
       onMouseLeave={handleMouseLeave}
-      className={`group relative flex flex-col justify-between rounded-3xl border border-cyan-500/15 dark:border-cyan-500/20 bg-card/90 backdrop-blur-md p-8 shadow-xl transition-all duration-300 hover:shadow-2xl hover:shadow-cyan-950/30 overflow-hidden ${className}`}
+      className={`group relative flex flex-col justify-between rounded-3xl border border-cyan-500/25 dark:border-cyan-400/30 bg-card/95 backdrop-blur-md p-8 shadow-xl transition-all duration-300 hover:shadow-2xl hover:shadow-cyan-950/40 overflow-hidden ${className}`}
       {...props}
     >
       {/* 1. Inner radial glow following the mouse pointer */}

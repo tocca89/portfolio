@@ -43,14 +43,14 @@ export const Skills: React.FC = () => {
               >
                 <MagicCard className="h-full" gradientSize={280}>
                   <div className="flex items-center gap-4 mb-4">
-                    <div className="w-12 h-12 rounded-2xl border-2 border-cyan-400/80 bg-cyan-950/40 backdrop-blur-md flex items-center justify-center text-cyan-400 dark:text-cyan-300 shadow-[0_0_15px_rgba(34,211,238,0.2)] group-hover:scale-105 group-hover:border-cyan-300 transition-all">
+                    <div className="w-12 h-12 rounded-2xl border-2 border-cyan-400/90 bg-cyan-950/50 backdrop-blur-md flex items-center justify-center text-cyan-400 dark:text-cyan-300 shadow-[0_0_15px_rgba(34,211,238,0.25)] group-hover:scale-105 group-hover:border-cyan-300 transition-all">
                       <Icon className="w-6 h-6" />
                     </div>
                     <div>
-                      <h3 className="text-lg sm:text-xl font-bold tracking-tight text-cyan-600 dark:text-cyan-400 group-hover:text-cyan-500 dark:group-hover:text-cyan-300 transition-colors">
+                      <h3 className="text-lg sm:text-xl font-bold tracking-tight text-cyan-600 dark:text-cyan-300 group-hover:text-cyan-500 dark:group-hover:text-cyan-200 transition-colors">
                         {cat.name}
                       </h3>
-                      <p className="text-xs text-muted-foreground">{cat.description}</p>
+                      <p className="text-xs text-zinc-600 dark:text-slate-200 font-medium">{cat.description}</p>
                     </div>
                   </div>
 
@@ -59,7 +59,7 @@ export const Skills: React.FC = () => {
                     {cat.skills.map((skill, sIdx) => (
                       <span
                         key={sIdx}
-                        className="px-3 py-1.5 rounded-xl text-xs font-semibold bg-white/5 dark:bg-white/5 border border-white/10 text-foreground/90 hover:border-[#389bc7]/50 hover:bg-[#18648a]/15 transition-colors"
+                        className="px-3 py-1.5 rounded-xl text-xs font-semibold bg-cyan-950/20 dark:bg-white/10 border border-cyan-900/25 dark:border-white/20 text-zinc-800 dark:text-slate-100 hover:border-cyan-400/50 hover:bg-[#18648a]/30 transition-colors"
                       >
                         {skill}
                       </span>
