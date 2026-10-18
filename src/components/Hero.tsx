@@ -65,16 +65,21 @@ export const Hero: React.FC = () => {
               <span className="text-gradient-primary">{t.hero.name}</span>
             </h1>
 
-            {/* Smooth animated text morph with blur */}
-            <div className="h-10 sm:h-12 flex items-center justify-center lg:justify-start overflow-hidden relative">
+            {/* Smooth animated text transition without WebKit blur artifacts */}
+            <div className="h-10 sm:h-12 flex items-center justify-center lg:justify-start overflow-hidden relative border-0 outline-none">
               <AnimatePresence mode="wait">
                 <motion.span
                   key={roleIndex}
-                  initial={{ opacity: 0, y: 20, filter: 'blur(8px)' }}
-                  animate={{ opacity: 1, y: 0, filter: 'blur(0px)' }}
-                  exit={{ opacity: 0, y: -20, filter: 'blur(8px)' }}
-                  transition={{ duration: 0.45, ease: 'easeOut' }}
-                  className="text-xl sm:text-2xl lg:text-3xl font-bold text-foreground/90 tracking-tight"
+                  initial={{ opacity: 0, y: 16 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  exit={{ opacity: 0, y: -16 }}
+                  transition={{ duration: 0.35, ease: 'easeOut' }}
+                  className="text-xl sm:text-2xl lg:text-3xl font-bold text-foreground/90 tracking-tight border-0 outline-none ring-0 select-none"
+                  style={{
+                    WebkitBackfaceVisibility: 'hidden',
+                    backfaceVisibility: 'hidden',
+                    transform: 'translateZ(0)',
+                  }}
                 >
                   {t.hero.roles[roleIndex]}
                 </motion.span>
