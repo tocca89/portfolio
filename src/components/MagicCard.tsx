@@ -8,28 +8,29 @@ export interface MagicCardProps extends React.HTMLAttributes<HTMLDivElement> {
   gradientSize?: number;
   gradientColor?: string;
   gradientFrom?: string;
-  gradientTo?: string;
 }
 
 export const MagicCard: React.FC<MagicCardProps> = ({
   children,
   className = '',
-  gradientSize = 280,
+  gradientSize = 300,
   gradientColor,
   gradientFrom,
-  gradientTo,
   ...props
 }) => {
   const { theme } = useTheme();
   const isDark = theme === 'dark';
 
-  const defaultGlow = isDark ? 'rgba(56, 181, 223, 0.22)' : 'rgba(56, 181, 223, 0.25)';
+  // Inner soft radial aura: light sky-blue in day mode, electric cyan in night mode
+  const defaultGlow = isDark
+    ? 'rgba(34, 211, 238, 0.18)'
+    : 'rgba(56, 189, 248, 0.14)';
+
+  // Border spotlight color: bright sky-blue in day mode, vibrant cyan in night mode
   const defaultFrom = isDark ? '#38bdf8' : '#389bc7';
-  const defaultTo = isDark ? '#18648a' : '#18648a';
 
   const activeGlow = gradientColor ?? defaultGlow;
   const activeFrom = gradientFrom ?? defaultFrom;
-  const activeTo = gradientTo ?? defaultTo;
 
   const mouseX = useMotionValue(-gradientSize);
   const mouseY = useMotionValue(-gradientSize);
@@ -52,37 +53,35 @@ export const MagicCard: React.FC<MagicCardProps> = ({
     <div
       onMouseMove={handleMouseMove}
       onMouseLeave={handleMouseLeave}
-      className={`group relative flex flex-col justify-between rounded-3xl border border-[#389bc7]/35 dark:border-cyan-400/30 bg-[#eaf4fb] dark:bg-[#122230]/90 backdrop-blur-md p-8 shadow-lg dark:shadow-xl transition-all duration-300 hover:shadow-xl hover:shadow-[#18648a]/15 dark:hover:shadow-2xl dark:hover:shadow-cyan-950/40 overflow-hidden ${className}`}
+      className={`group relative rounded-3xl p-[1.5px] bg-[#389bc7]/25 dark:bg-cyan-500/20 transition-all duration-300 hover:shadow-xl hover:shadow-[#18648a]/10 dark:hover:shadow-2xl dark:hover:shadow-cyan-950/40 overflow-hidden flex flex-col ${className}`}
       {...props}
     >
-      {/* 1. Inner radial glow following the mouse pointer */}
+      {/* 1. Dynamic border spotlight that follows the mouse along the perimeter */}
       <motion.div
-        className="pointer-events-none absolute -inset-px rounded-3xl opacity-0 transition-opacity duration-300 group-hover:opacity-100 z-0"
+        className="pointer-events-none absolute -inset-full opacity-0 transition-opacity duration-300 group-hover:opacity-100 z-0"
         style={{
           background: useMotionTemplate`
-            radial-gradient(${gradientSize}px circle at ${mouseX}px ${mouseY}px, ${activeGlow}, transparent 75%)
+            radial-gradient(${gradientSize}px circle at ${mouseX}px ${mouseY}px, ${activeFrom}, transparent 70%)
           `,
         }}
       />
 
-      {/* 2. Illuminated border gradient spotlight following the mouse pointer */}
-      <motion.div
-        className="pointer-events-none absolute -inset-px rounded-3xl opacity-0 transition-opacity duration-300 group-hover:opacity-100 z-0"
-        style={{
-          background: useMotionTemplate`
-            radial-gradient(${gradientSize}px circle at ${mouseX}px ${mouseY}px, ${activeFrom}, ${activeTo}, transparent 70%)
-          `,
-          maskImage: 'linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0)',
-          WebkitMaskImage: 'linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0)',
-          maskComposite: 'exclude',
-          WebkitMaskComposite: 'xor',
-          padding: '1.5px',
-        }}
-      />
+      {/* 2. Inner card container with clean sky-blue (day) or dark petrol (night) background */}
+      <div className="relative z-10 w-full h-full rounded-[22.5px] bg-[#eaf4fb] dark:bg-[#122230] p-8 flex flex-col justify-between overflow-hidden">
+        {/* Soft inner ambient glow that follows the cursor inside the card */}
+        <motion.div
+          className="pointer-events-none absolute -inset-px opacity-0 transition-opacity duration-300 group-hover:opacity-100 z-0"
+          style={{
+            background: useMotionTemplate`
+              radial-gradient(${gradientSize}px circle at ${mouseX}px ${mouseY}px, ${activeGlow}, transparent 75%)
+            `,
+          }}
+        />
 
-      {/* 3. Card Content */}
-      <div className="relative z-10 w-full flex flex-col h-full justify-between">
-        {children}
+        {/* 3. Card Content */}
+        <div className="relative z-10 w-full flex flex-col h-full justify-between">
+          {children}
+        </div>
       </div>
     </div>
   );
