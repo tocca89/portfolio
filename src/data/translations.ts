@@ -209,7 +209,7 @@ export const translations: Record<Language, TranslationContent> = {
         {
           title: "Espansione Account & Upselling Strategico",
           description:
-            "Individuazione proattiva delle opportunità di crescita all'interno delle aziende clienti, convertendo contratti base in accordi enterprise ad alto valore (+236% ARR).",
+            "Individuazione proattiva delle opportunità di crescita all'interno delle aziende clienti, convertendo contratti base in accordi enterprise ad alto valore.",
           tags: ["Espansione Account", "Crescita LTV", "Cross-selling", "Net Retention"],
         },
         {
@@ -328,16 +328,16 @@ export const translations: Record<Language, TranslationContent> = {
           subtitle: "Da un contratto pilota di 3 licenze a un accordo enterprise di 21 licenze",
           category: "Espansione Account",
           description:
-            "Attraverso un affiancamento costante e la dimostrazione del ritorno operativo per i team sul campo, ho trasformato un contratto iniziale da 198 € al mese in un accordo enterprise da 666 € al mese (+236%).",
+            "Attraverso un affiancamento costante e la dimostrazione del ritorno operativo per i team sul campo, ho trasformato un contratto iniziale da 198 € al mese in un accordo enterprise da 666 € al mese.",
           results: [
             "Crescita utenti da 3 a 21 licenze attive",
-            "Aumento del valore mensile da 198 € a 666 € (+236%)",
+            "Aumento del valore mensile da 198 € a 666 €",
             "Zero churn e massima adozione da parte dei tecnici operativi",
             "Miglioramento dell'efficienza nei flussi di lavoro aziendali",
           ],
-          tags: ["Espansione Account", "Upselling", "B2B SaaS", "+236% ARR"],
+          tags: ["Espansione Account", "Upselling", "B2B SaaS", "Revenue Growth"],
           image: "https://images.pexels.com/photos/3183150/pexels-photo-3183150.jpeg?auto=compress&cs=tinysrgb&w=800",
-          highlight: "+236% Valore Account",
+          highlight: "Espansione Contratto AC Systems",
         },
         {
           id: "automated-workflows",
@@ -402,7 +402,7 @@ export const translations: Record<Language, TranslationContent> = {
           achievements: [
             "146 aziende avviate e mantenimento di circa 108 clienti attivi continuativi",
             "Presidio e tutela di 25.000 € di MRR netto",
-            "Sviluppo di casi concreti di espansione contrattuale (+236% su AC Systems)",
+            "Sviluppo di casi concreti di espansione contrattuale su clienti chiave (AC Systems)",
           ],
         },
         {
@@ -589,7 +589,7 @@ export const translations: Record<Language, TranslationContent> = {
         {
           title: "Expansión de Cuentas & Upselling Estratégico",
           description:
-            "Detección proactiva de momentos clave de crecimiento dentro de las cuentas, transformando contratos piloto en acuerdos enterprise de alto valor (+236% ARR).",
+            "Detección proactiva de momentos clave de crecimiento dentro de las cuentas, transformando contratos piloto en acuerdos enterprise de alto valor.",
           tags: ["Expansión de Cuenta", "Crecimiento LTV", "Cross-selling", "Net Retention"],
         },
         {
@@ -708,16 +708,16 @@ export const translations: Record<Language, TranslationContent> = {
           subtitle: "De una prueba de 3 licencias a un acuerdo corporativo de 21 licencias",
           category: "Expansión de Cuenta",
           description:
-            "Mediante un seguimiento cercano y demostrando el retorno operativo para los técnicos de campo, transformé un contrato inicial de 198 € al mes en un despliegue de 666 € al mes (+236%).",
+            "Mediante un seguimiento cercano y demostrando el retorno operativo para los técnicos de campo, transformé un contrato inicial de 198 € al mes en un despliegue de 666 € al mes.",
           results: [
             "Crecimiento de 3 a 21 cuentas activas",
-            "Incremento del valor de 198 € a 666 € mensuales (+236%)",
+            "Incremento del valor de 198 € a 666 € mensuales",
             "Cero cancelaciones y máxima satisfacción en equipos técnicos",
             "Estandarización de procedimientos operativos de campo",
           ],
-          tags: ["Expansión de Cuenta", "Upselling", "B2B SaaS", "+236% ARR"],
+          tags: ["Expansión de Cuenta", "Upselling", "B2B SaaS", "Revenue Growth"],
           image: "https://images.pexels.com/photos/3183150/pexels-photo-3183150.jpeg?auto=compress&cs=tinysrgb&w=800",
-          highlight: "+236% Valor de Cuenta",
+          highlight: "Expansión de Cuenta AC Systems",
         },
         {
           id: "automated-workflows",
@@ -782,7 +782,7 @@ export const translations: Record<Language, TranslationContent> = {
           achievements: [
             "146 empresas iniciadas y consolidación de unas 108 cuentas activas",
             "Custodia de 25.000 € de MRR neto gestionado",
-            "Casos destacados de ampliación de contrato (+236% en AC Systems)",
+            "Casos destacados de ampliación de contrato en clientes clave (AC Systems)",
           ],
         },
         {
@@ -969,7 +969,7 @@ export const translations: Record<Language, TranslationContent> = {
         {
           title: "Account Expansion & Strategic Upselling",
           description:
-            "Proactively identifying growth triggers across the customer base, turning pilot subscriptions into high-value enterprise partnerships (+236% ARR).",
+            "Proactively identifying growth triggers across the customer base, turning pilot subscriptions into high-value enterprise partnerships.",
           tags: ["Account Expansion", "LTV Growth", "Cross-selling", "Net Retention"],
         },
         {
@@ -1088,16 +1088,16 @@ export const translations: Record<Language, TranslationContent> = {
           subtitle: "Scaling a 3-seat pilot into a 21-seat enterprise contract",
           category: "Account Expansion",
           description:
-            "Through consistent value delivery and demonstrating workflow efficiency across field teams, expanded an initial €198/month pilot contract into a €666/month enterprise partnership (+236%).",
+            "Through consistent value delivery and demonstrating workflow efficiency across field teams, expanded an initial €198/month pilot contract into a €666/month enterprise partnership.",
           results: [
             "Account scaled from 3 to 21 active user seats",
-            "Monthly contract value grew from €198 to €666 (+236%)",
+            "Monthly contract value grew from €198 to €666",
             "Zero churn and complete field-team adoption",
             "Custom workflow setup for field operations",
           ],
-          tags: ["Account Expansion", "Upselling", "B2B SaaS", "+236% ARR"],
+          tags: ["Account Expansion", "Upselling", "B2B SaaS", "Revenue Growth"],
           image: "https://images.pexels.com/photos/3183150/pexels-photo-3183150.jpeg?auto=compress&cs=tinysrgb&w=800",
-          highlight: "+236% Account Growth",
+          highlight: "AC Systems Account Expansion",
         },
         {
           id: "automated-workflows",
@@ -1162,7 +1162,7 @@ export const translations: Record<Language, TranslationContent> = {
           achievements: [
             "146 onboarded companies with approximately 108 active accounts maintained",
             "Managing and safeguarding €25,000 net MRR",
-            "Executed high-impact account expansions (+236% on AC Systems)",
+            "Executed high-impact account expansions across key accounts (AC Systems)",
           ],
         },
         {

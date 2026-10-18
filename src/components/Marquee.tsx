@@ -19,7 +19,7 @@ export const Marquee: React.FC = () => {
     { name: 'TakeOff CRM', icon: Layers, color: 'text-cyan-400' },
     { name: 'n8n & Make Automation', icon: Workflow, color: 'text-amber-400' },
     { name: 'Customer Onboarding', icon: Users2, color: 'text-emerald-400' },
-    { name: 'Account Expansion (+236%)', icon: TrendingUp, color: 'text-green-400' },
+    { name: 'Account Expansion & Upselling', icon: TrendingUp, color: 'text-green-400' },
     { name: 'Google Antigravity & AI', icon: Sparkles, color: 'text-cyan-400' },
     { name: 'Claude Code & LLMs', icon: Cpu, color: 'text-rose-400' },
     { name: 'ISO 9001 Quality Systems', icon: ShieldCheck, color: 'text-blue-400' },
